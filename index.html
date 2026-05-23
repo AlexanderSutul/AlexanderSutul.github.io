@@ -3,364 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aleksandr Sutulov</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: "Courier New", monospace;
-        background:
-          linear-gradient(#121212 1px, transparent 1px),
-          linear-gradient(90deg, #121212 1px, transparent 1px), #0b0f1a;
-        background-size: 24px 24px;
-        color: #f5f5f5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-      }
-
-      .card {
-        width: 100%;
-        max-width: 900px;
-        background: #151a2e;
-        border: 4px solid #f6d365;
-        box-shadow: 12px 12px 0 #000;
-        padding: 32px;
-      }
-
-      .badge {
-        display: inline-block;
-        background: #ff4d6d;
-        color: white;
-        padding: 8px 12px;
-        border: 3px solid #000;
-        box-shadow: 4px 4px 0 #000;
-        margin-bottom: 24px;
-        font-weight: bold;
-      }
-
-      h1 {
-        font-size: clamp(36px, 8vw, 72px);
-        line-height: 1;
-        margin: 0 0 16px;
-        color: #7bdff2;
-        text-shadow: 4px 4px 0 #000;
-      }
-
-      h2 {
-        color: #f6d365;
-        margin-top: 0;
-        font-size: 22px;
-      }
-
-      p {
-        font-size: 18px;
-        line-height: 1.6;
-        color: #d7e3fc;
-      }
-
-      .intro {
-        margin-bottom: 20px;
-      }
-
-      .location {
-        color: #9aa4c7;
-        font-size: 16px;
-        font-weight: bold;
-        margin: -6px 0 20px;
-      }
-
-      .status {
-        color: #9aa4c7;
-        font-size: 16px;
-        font-weight: bold;
-        margin: -6px 0 20px;
-      }
-
-      .section {
-        margin-top: 32px;
-      }
-
-      .section-title {
-        color: #f6d365;
-        font-size: 18px;
-        letter-spacing: 0;
-        margin: 0 0 14px;
-        text-transform: uppercase;
-      }
-
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin: 28px 0;
-      }
-
-      .skill {
-        background: #1f7a8c;
-        border: 3px solid #000;
-        box-shadow: 4px 4px 0 #000;
-        padding: 10px 14px;
-        font-weight: bold;
-      }
-
-      .timeline {
-        display: grid;
-        gap: 18px;
-      }
-
-      .role {
-        border-left: 4px solid #7bdff2;
-        padding-left: 16px;
-      }
-
-      .role h3 {
-        color: #ffffff;
-        font-size: 19px;
-        margin: 0 0 6px;
-      }
-
-      .role-meta {
-        color: #9aa4c7;
-        font-size: 15px;
-        font-weight: bold;
-        margin: 0 0 8px;
-      }
-
-      .role-stack {
-        color: #7bdff2;
-        font-size: 14px;
-        font-weight: bold;
-        margin: 10px 0 0;
-      }
-
-      .role p {
-        font-size: 16px;
-        margin: 0;
-      }
-
-      .role ul {
-        color: #d7e3fc;
-        font-size: 16px;
-        line-height: 1.55;
-        margin: 10px 0 0;
-        padding-left: 20px;
-      }
-
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-top: 32px;
-      }
-
-      a {
-        color: #000;
-        background: #f6d365;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 14px 18px;
-        border: 3px solid #000;
-        box-shadow: 5px 5px 0 #000;
-        transition: 0.12s;
-      }
-
-      a:hover {
-        transform: translate(3px, 3px);
-        box-shadow: 2px 2px 0 #000;
-        background: #7bdff2;
-      }
-
-      .footer {
-        margin-top: 32px;
-        font-size: 14px;
-        color: #9aa4c7;
-      }
-
-      .cursor {
-        animation: blink 1s steps(2, start) infinite;
-      }
-
-      @keyframes blink {
-        50% {
-          opacity: 0;
-        }
-      }
-
-      @media (max-width: 560px) {
-        body {
-          padding: 16px;
-        }
-
-        .card {
-          padding: 24px;
-          box-shadow: 8px 8px 0 #000;
-        }
-
-        p {
-          font-size: 16px;
-        }
-      }
-    </style>
+    <title></title>
+    <link rel="alternate" hreflang="en" href="./" />
+    <link rel="alternate" hreflang="de" href="./de/" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="card">
-      <div class="badge">AI-Focused Software Engineer for Web Products</div>
+      <nav
+        class="language-switch"
+        aria-label=""
+        data-i18n-aria-label="languageLabel"
+      >
+        <button
+          type="button"
+          data-language="en"
+          data-i18n="languageEn"
+          aria-pressed="true"
+        ></button>
+        <button
+          type="button"
+          data-language="de"
+          data-i18n="languageDe"
+          lang="de"
+          aria-pressed="false"
+        ></button>
+      </nav>
 
-      <h1>Aleksandr<br />Sutulov<span class="cursor">_</span></h1>
+      <div class="badge" data-i18n="badge"></div>
 
-      <h2>Senior Software Engineer</h2>
+      <h1>
+        <span data-i18n="firstName"></span><br /><span
+          data-i18n="lastName"
+        ></span
+        ><span class="cursor" data-i18n="cursor"></span>
+      </h1>
 
-      <p class="location">Based in Kiel, Germany</p>
+      <h2 data-i18n="headline"></h2>
 
-      <p class="status">Permanent Residentship (Niederlassungserlaubnis)</p>
+      <p class="location" data-i18n="location"></p>
 
-      <p class="intro">
-        I build web applications with a strong product mindset, clean
-        maintainable code, and practical experience across frontend, backend,
-        cloud services, APIs, AI integrations, and agent-assisted development
-        workflows.
-      </p>
+      <p class="status" data-i18n="status"></p>
+
+      <p class="intro" data-i18n="intro"></p>
 
       <div class="skills">
-        <div class="skill">TypeScript</div>
-        <div class="skill">Frontend</div>
-        <div class="skill">Backend</div>
-        <div class="skill">APIs</div>
-        <div class="skill">Go</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">AWS</div>
-        <div class="skill">AI Integration</div>
-        <div class="skill">AI Agents</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Testing</div>
+        <div class="skill" data-i18n="skillTypeScript"></div>
+        <div class="skill" data-i18n="skillFrontend"></div>
+        <div class="skill" data-i18n="skillBackend"></div>
+        <div class="skill" data-i18n="skillApis"></div>
+        <div class="skill" data-i18n="skillGo"></div>
+        <div class="skill" data-i18n="skillNode"></div>
+        <div class="skill" data-i18n="skillAws"></div>
+        <div class="skill" data-i18n="skillAiIntegration"></div>
+        <div class="skill" data-i18n="skillAiAgents"></div>
+        <div class="skill" data-i18n="skillSql"></div>
+        <div class="skill" data-i18n="skillTesting"></div>
       </div>
 
       <section class="section" aria-labelledby="experience-title">
-        <h2 class="section-title" id="experience-title">Experience</h2>
+        <h2
+          class="section-title"
+          id="experience-title"
+          data-i18n="experience"
+        ></h2>
         <div class="timeline">
           <article class="role">
-            <h3>Senior Software Engineer, IU Group</h3>
-            <div class="role-meta">
-              Full-time · Nov 2025-Present · Munich, Bavaria, Germany · Remote
-            </div>
-            <p>
-              Senior Software Engineer working remotely on web application
-              development and product engineering.
-            </p>
-            <div class="role-stack">
-              Web applications · Product engineering · Remote collaboration
-            </div>
+            <h3 data-i18n="iuTitle"></h3>
+            <div class="role-meta" data-i18n="iuMeta"></div>
+            <p data-i18n="iuDescription"></p>
+            <div class="role-stack" data-i18n="iuStack"></div>
           </article>
 
           <article class="role">
-            <h3>Senior Software Engineer, north.io GmbH</h3>
-            <div class="role-meta">
-              Full-time · Jan 2021-Oct 2025 · Kiel, Schleswig-Holstein, Germany
-            </div>
+            <h3 data-i18n="northTitle"></h3>
+            <div class="role-meta" data-i18n="northMeta"></div>
             <ul>
-              <li>
-                Spearheaded the development of a high-performance platform using
-                React, TypeScript, and Material UI.
-              </li>
-              <li>
-                Implemented robust testing strategies with Jest and React
-                Testing Library to ensure code quality.
-              </li>
-              <li>
-                Optimized backend services in Golang, enhancing performance and
-                maintainability.
-              </li>
-              <li>
-                Streamlined frontend and backend environments with Node.js and
-                Golang tooling, improving deployment efficiency.
-              </li>
+              <li data-i18n="northBullet1"></li>
+              <li data-i18n="northBullet2"></li>
+              <li data-i18n="northBullet3"></li>
+              <li data-i18n="northBullet4"></li>
             </ul>
-            <div class="role-stack">
-              Design Patterns · React.js · TypeScript · Material UI · Jest ·
-              React Testing Library · Golang · Node.js
-            </div>
+            <div class="role-stack" data-i18n="northStack"></div>
           </article>
 
           <article class="role">
-            <h3>Senior Software Engineer, EPAM Systems</h3>
-            <div class="role-meta">Full-time · Jul 2020-Jan 2021 · 7 mos</div>
-            <p>Worked on a client project with Node.js, Go, and AWS.</p>
-            <div class="role-stack">
-              Design Patterns · Problem Solving · Node.js · Go · AWS
-            </div>
+            <h3 data-i18n="epamTitle"></h3>
+            <div class="role-meta" data-i18n="epamMeta"></div>
+            <p data-i18n="epamDescription"></p>
+            <div class="role-stack" data-i18n="epamStack"></div>
           </article>
 
           <article class="role">
-            <h3>Full Stack Engineer, Unlimit</h3>
-            <div class="role-meta">Full-time · Sep 2019-Jul 2020 · 11 mos</div>
-            <p>
-              Designed and implemented web applications with Nest.js and
-              Angular.
-            </p>
-            <div class="role-stack">
-              Design Patterns · Angular · Nest.js · Full-stack development
-            </div>
+            <h3 data-i18n="unlimitTitle"></h3>
+            <div class="role-meta" data-i18n="unlimitMeta"></div>
+            <p data-i18n="unlimitDescription"></p>
+            <div class="role-stack" data-i18n="unlimitStack"></div>
           </article>
 
           <article class="role">
-            <h3>Web Developer, monastirev.ru</h3>
-            <div class="role-meta">Mar 2019-Sep 2019 · 7 mos</div>
-            <p>
-              Developed, executed, and supported the company's call-center app
-              using Angular and Symfony.
-            </p>
-            <div class="role-stack">
-              Design Patterns · Angular · Symfony · PHP
-            </div>
+            <h3 data-i18n="monastirevTitle"></h3>
+            <div class="role-meta" data-i18n="monastirevMeta"></div>
+            <p data-i18n="monastirevDescription"></p>
+            <div class="role-stack" data-i18n="monastirevStack"></div>
           </article>
 
           <article class="role">
-            <h3>Software Developer, Ovita.ru</h3>
-            <div class="role-meta">
-              Full-time · May 2017-Mar 2019 · 1 yr 11 mos
-            </div>
+            <h3 data-i18n="ovitaTitle"></h3>
+            <div class="role-meta" data-i18n="ovitaMeta"></div>
             <ul>
-              <li>
-                Used Python to build bots that perform tasks and talk to users.
-              </li>
-              <li>
-                Used Python to build parsers that collect and transform data
-                from various sources.
-              </li>
-              <li>
-                Used React.js, Node.js, and Python to build an analytics system
-                for surfacing data insights.
-              </li>
-              <li>
-                Used Python Flask to build a mail-server web application for
-                controlling and maintaining email communications.
-              </li>
-              <li>
-                Negotiated and communicated with external stakeholders,
-                including vendors, contractors, and consultants.
-              </li>
+              <li data-i18n="ovitaBullet1"></li>
+              <li data-i18n="ovitaBullet2"></li>
+              <li data-i18n="ovitaBullet3"></li>
+              <li data-i18n="ovitaBullet4"></li>
+              <li data-i18n="ovitaBullet5"></li>
             </ul>
-            <div class="role-stack">
-              Python · React.js · Node.js · Flask · Data parsing · Automation
-            </div>
+            <div class="role-stack" data-i18n="ovitaStack"></div>
           </article>
         </div>
       </section>
 
       <div class="links">
-        <a href="https://de.linkedin.com/in/asutulov" target="_blank"
-          >LinkedIn</a
-        >
-        <a href="mailto:sutulovalexander@gmail.com">Email</a>
+        <a
+          href="https://de.linkedin.com/in/asutulov"
+          target="_blank"
+          data-i18n="linkedin"
+        ></a>
+        <a href="mailto:sutulovalexander@gmail.com" data-i18n="email"></a>
       </div>
 
-      <div class="footer">© 2026 · built with HTML, CSS and 8-bit energy</div>
+      <div class="footer" data-i18n="footer"></div>
     </main>
+    <script src="./translations.js"></script>
   </body>
 </html>
